@@ -1,0 +1,46 @@
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'ear'
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+	//spring dependencies modules	
+    compile group: 'org.springframework', name: 'spring-context', version: '4.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: '4.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-beans', version: '4.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-webmvc', version: '4.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-aop', version: '4.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context-support', version: '4.2.6.RELEASE'
+    compile group: 'org.springframework', name: 'spring-tx', version: '4.2.6.RELEASE'
+    
+    //elastic search dependencies module
+	compile group: 'org.elasticsearch', name: 'elasticsearch', version: '2.3.3'
+	
+	//hibernate dependencies modules
+	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.1.0.Final'
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.1.0.Final'
+	compile group: 'org.hibernate', name: 'hibernate-validator', version: '5.1.0.Final'
+	compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.0-api', version: '1.0.1.Final'
+	compile group: 'org.hibernate', name: 'hibernate-ehcache', version: '5.1.0.Final'
+	
+	//miscelleneous deps modules
+	compile group: 'org.apache.logging.log4j', name: 'log4j-core',version: '2.5'
+	
+	//test framework dependencies
+	compile group: 'info.cukes', name: 'cucumber-spring', version: '1.1.5'
+	compile group: 'info.cukes', name: 'cucumber-junit', version: '1.1.5'
+	
+	//antlr string template engine
+	compile group: 'org.antlr', name: 'stringtemplate', version: '4.0.2'
+	//jsonschema2pojo - experimentation
+	compile group: 'org.jsonschema2pojo', name: 'jsonschema2pojo-core', version: '0.4.23'
+}
+
+
+
+
