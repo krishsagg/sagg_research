@@ -1,0 +1,42 @@
+{
+  "name": "angello",
+  "version": "2.3.1",
+  "description": "Task management app written with AngularJS",
+  "private": true,
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "karma start --single-run --browsers Chrome client/tests/karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angularjs-in-action/angello.git"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "karma": "~0.12",
+    "karma-chrome-launcher": "~0.1",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "^0.2.2",
+    "karma-ng-html2js-preprocessor": "^0.1.2"
+  },
+  "contributors": [
+    "Brian Ford <btford@umich.edu> (http://briantford.com/)",
+    "Lukas Ruebbelke <simpul@gmail.com> (http://onehungrymind.com/)",
+    "Martin Gontovnikas <martin@gon.to> (http://gon.to/)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angularjs-in-action/angello/issues"
+  },
+  "homepage": "https://github.com/angularjs-in-action/angello#readme",
+  "main": "index.js",
+  "author": ""
+}
