@@ -1,10 +1,17 @@
 package com.grundfos.generator.dao.impl;
 
-import org.springframework.stereotype.Component;
-
+import java.util.List;
+import org.springframework.stereotype.Repository;
 import com.grundfos.generator.dao.IComponentDao;
+import com.grundfos.generator.entity.CompDetail;
 
-@Component
+@Repository("compDao")
 public class ComponentDao implements IComponentDao{
 
+	
+	
+	public List<CompDetail> getComponentListByName(String name) {
+		return null;
+	}
+	
 }
