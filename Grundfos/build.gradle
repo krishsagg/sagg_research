@@ -45,6 +45,9 @@ dependencies {
 	compile group: 'org.antlr', name: 'stringtemplate', version: '4.0.2'
 	//jsonschema2pojo - experimentation
 	compile group: 'org.jsonschema2pojo', name: 'jsonschema2pojo-core', version: '0.4.23'
+	
+	//swagger documentation
+	compile group: 'com.knappsack', name: 'swagger4spring-web', version: '0.3.5'
 }
 
 
