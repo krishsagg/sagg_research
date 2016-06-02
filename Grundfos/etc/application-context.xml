@@ -29,7 +29,7 @@
 		  <property name="jpaDialect" ref="jpaDialect" />
     </bean>      
     
-    <!-- Stateless RESTful services use BASIC authentication -->
+    <!-- Stateless RESTful services use BASIC authentication 
     <security:http create-session="stateless" pattern="/manifest/**">
         <security:intercept-url pattern="/**" access="ROLE_REST"/>
         <security:http-basic/>
@@ -41,7 +41,7 @@
                 <security:user name="rest" password="rest" authorities="ROLE_REST"/>
             </security:user-service>
         </security:authentication-provider>
-    </security:authentication-manager> 
+    </security:authentication-manager>  -->
     
     <tx:annotation-driven transaction-manager="transactionManager" />
     

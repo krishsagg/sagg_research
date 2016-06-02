@@ -1,0 +1,11 @@
+<web-fragment> 
+    <name>grundfos</name> 
+    <ordering> 
+    	<after> 
+            <name>grundfosServiceRegistry</name> 
+        </after
+        <before> 
+            <others/> 
+        </before> 
+    </ordering> 
+</web-fragment>

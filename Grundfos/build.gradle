@@ -21,7 +21,7 @@ dependencies {
    	compile group: 'org.springframework', name: 'spring-orm', version: '4.2.6.RELEASE'
     
     //elastic search dependencies module
-	compile group: 'org.elasticsearch', name: 'elasticsearch', version: '2.3.3'
+	//compile group: 'org.elasticsearch', name: 'elasticsearch', version: '2.3.3'
 	
 	//hibernate dependencies modules
 	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.1.0.Final'
