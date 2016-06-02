@@ -13,16 +13,14 @@ public class EntityServiceImpl implements IEntityService{
 	
 	@Autowired
 	private IComponentDao compDAO;
-
+	
 	@Override
 	public void createComponent() {
-		// TODO Auto-generated method stub
 		
 	}
-
+	
 	@Override
 	public void createEntity(CompDetail component) {
-		// TODO Auto-generated method stub
 		
 	}
 	
