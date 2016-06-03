@@ -7,11 +7,6 @@
        http://www.springframework.org/schema/osgi  
        http://www.springframework.org/schema/osgi/spring-osgi.xsd">
 
-    <osgi:service id="simpleServiceOsgi" ref="simpleService"                             
-      interface="org.xyz.MyService" />
-      
-    <bundle id="aBundle" symbolic-name="org.xyz.abundle"
-   		location="http://www.xyz.com/bundles/org.xyz.abundle.jar"
-   		action="start"/>
+    <bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
      
 </beans>
