@@ -1,4 +1,4 @@
-angular.module('Angello.User')
+angular.module('Grunfoss.User')
     .directive('userstory',
         function ($rootScope, StoriesModel, $log) {
             var linker = function (scope, element, attrs) {

@@ -1,4 +1,4 @@
-angular.module('Angello.Common')
+angular.module('Grunfoss.Common')
     .animation('.details-animation',
         function () {
             return {

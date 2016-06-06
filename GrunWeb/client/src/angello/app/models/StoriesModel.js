@@ -1,4 +1,4 @@
-angular.module('Angello.Common')
+angular.module('Grunfoss.Common')
     .service('StoriesModel',
         function ($http, EndpointConfigService, UtilsService) {
             var service = this,
@@ -33,7 +33,7 @@ angular.module('Angello.Common')
             };
 
             service.destroy = function (story_id) {
-                return $http.putS(
+                return $http.put(
                     EndpointConfigService.getUrlForId(MODEL, story_id)
                 );
             };

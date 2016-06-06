@@ -1,4 +1,4 @@
-angular.module('Angello.Common')
+angular.module('Grunfoss.Common')
     .service('LoadingService',
         function ($rootScope) {
             var service = this;

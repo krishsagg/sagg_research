@@ -7,7 +7,7 @@ describe('User Route', function () {
     // Inject and assign the $route and $rootScope services.
     // Put the template in template cache.
 
-    beforeEach(module('Angello'));
+    beforeEach(module('Grunfoss'));
 
     beforeEach(inject(function (_$location_, _$route_, $templateCache, _$rootScope_) {
         $route = _$route_;

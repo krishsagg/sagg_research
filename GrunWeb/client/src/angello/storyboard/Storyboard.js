@@ -1,1 +1,1 @@
-angular.module('Angello.Storyboard', ['Angello.Common']);
+angular.module('Grunfoss.Storyboard', ['Grunfoss.Common']);

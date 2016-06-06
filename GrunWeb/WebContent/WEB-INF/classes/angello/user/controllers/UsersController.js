@@ -1,7 +1,6 @@
-angular.module('Angello.User')
+angular.module('Grunfoss.User')
     .controller('UsersCtrl', function ($scope, $log, UsersModel, $timeout) {
         var myUsers = this;
-
         myUsers.newUser = { name: '', email: '' };
         myUsers.users = {};
 

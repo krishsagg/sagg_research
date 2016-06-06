@@ -1,4 +1,4 @@
-angular.module('Angello.Login')
+angular.module('Grunfoss.Login')
     .controller('LoginCtrl',
         function ($scope, $location, $log, LoginService) {
             var login = this;

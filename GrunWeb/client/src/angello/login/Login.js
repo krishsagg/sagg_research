@@ -1,1 +1,1 @@
-angular.module('Angello.Login', ['Angello.Common']);
+angular.module('Grunfoss.Login', ['Grunfoss.Common']);

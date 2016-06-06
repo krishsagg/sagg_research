@@ -1,21 +1,21 @@
-var myModule = angular.module('Angello',
+var myModule = angular.module('Grunfoss',
     [
         'ngRoute',
         'ngAnimate',
         'firebase',
         'ngMessages',
-        'Angello.Common',
-        'Angello.Dashboard',
-        'Angello.Login',
-        'Angello.Storyboard',
-        'Angello.User',
+        'Grunfoss.Common',
+        'Grunfoss.Dashboard',
+        'Grunfoss.Login',
+        'Grunfoss.Storyboard',
+        'Grunfoss.User',
         'auth0',
         'angular-jwt',
         'angular-storage'
     ]);
 
-myModule.config(function($routeProvider, $httpProvider, $provide,
-  authProvider, CURRENT_BACKEND, jwtInterceptorProvider) {
+	myModule.config(function($routeProvider, $httpProvider, $provide,
+			authProvider, CURRENT_BACKEND, jwtInterceptorProvider) {
 
     $routeProvider
         .when('/', {
@@ -60,11 +60,11 @@ myModule.config(function($routeProvider, $httpProvider, $provide,
         })
         .otherwise({redirectTo: '/'});
 
-// Auth0 Authentication
-authProvider.init({
-    domain: 'angello.auth0.com',
-    clientID: 'Fq8hKAkghu45WpnqrYTc6dbvXhBUdP7l'
-});
+    // Auth0 Authentication
+    authProvider.init({
+    	domain: 'angello.auth0.com',
+    	clientID: 'Fq8hKAkghu45WpnqrYTc6dbvXhBUdP7l'
+    });
 
     // Loading interceptor
     $httpProvider.interceptors.push('loadingInterceptor');
@@ -81,7 +81,7 @@ authProvider.init({
     $httpProvider.interceptors.push('jwtInterceptor');
 
 
-
+    
 
     // Decorator
     // Use the `decorator` solution to substitute or attach behaviors to
@@ -168,6 +168,14 @@ myModule.value('STORY_STATUSES', [
     {name: 'QA Review'},
     {name: 'Verified'}
 ]);
+
+myModule.value('PAYMENT_GATEWAY', [
+    {name: 'Axis'},
+    {name: 'HDFC'},
+    {name: 'ICICI'},
+    {name: 'PayTM'}
+]);
+
 
 myModule.value('STORY_TYPES', [
     {name: 'Feature'},

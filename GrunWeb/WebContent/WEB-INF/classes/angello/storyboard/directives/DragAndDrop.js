@@ -1,4 +1,4 @@
-angular.module('Angello.Storyboard')
+angular.module('Grunfoss.Storyboard')
     .factory('$dragging', function () {
         var data = null;
         var type = null;

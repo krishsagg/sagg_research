@@ -1,4 +1,4 @@
-angular.module('Angello.Common')
+angular.module('Grunfoss.Common')
     .animation('.list-area-animation', function () {
         return {
             addClass: function (element, className, done) {

@@ -6,7 +6,7 @@ describe('userstory Directive', function () {
         StoriesModel,
         $rootScope;
 
-    beforeEach(module('Angello.User'));
+    beforeEach(module('Grunfoss.User'));
 
     beforeEach(inject(function($q, $compile, _$rootScope_, _StoriesModel_) {
         $rootScope = _$rootScope_;

@@ -3,7 +3,7 @@
 describe('Loading Service', function () {
     var $rootScope, LoadingService;
 
-    beforeEach(module('Angello.Common'));
+    beforeEach(module('GrunfossS.Common'));
 
     beforeEach(inject(function (_$rootScope_, _LoadingService_) {
         $rootScope = _$rootScope_;

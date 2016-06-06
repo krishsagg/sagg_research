@@ -3,8 +3,8 @@
 describe('Storyboard form', function() {
     var scope, ctrl;
 
-    beforeEach(module('Angello.Storyboard'));
-    beforeEach(module('Angello.Templates'));
+    beforeEach(module('Grunfoss.Storyboard'));
+    beforeEach(module('Grunfoss.Templates'));
 
     beforeEach(inject(function($q, $rootScope, $controller, $templateCache, $compile) {
         var UsersModel = {

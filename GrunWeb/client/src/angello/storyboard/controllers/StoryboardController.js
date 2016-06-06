@@ -1,4 +1,4 @@
-angular.module('Angello.Storyboard')
+angular.module('Grunfoss.Storyboard')
     .controller('StoryboardCtrl',
         function ($scope, $log, StoriesModel, UsersModel,
                     STORY_STATUSES, STORY_TYPES) {
@@ -96,7 +96,6 @@ angular.module('Angello.Storyboard')
                     if (story.status === status) empty = false;
                 });
             }
-
             return empty;
         };
 

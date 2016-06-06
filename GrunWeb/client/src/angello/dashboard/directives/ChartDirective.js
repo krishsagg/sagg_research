@@ -1,4 +1,4 @@
-angular.module('Angello.Dashboard')
+angular.module('Grunfoss.Dashboard')
     .directive('chart',
         function () {
             var parseDataForCharts = function (sourceArray, sourceProp,

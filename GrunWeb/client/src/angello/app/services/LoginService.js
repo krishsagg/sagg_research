@@ -1,4 +1,4 @@
-angular.module('Angello.Common')
+angular.module('Grunfoss.Common')
     .service('LoginService',
         function ($rootScope, LoadingService, EndpointConfigService, auth, store,
             CURRENT_BACKEND, $log, $location, jwtHelper) {

@@ -1,4 +1,4 @@
-angular.module('Angello.Dashboard')
+angular.module('Grunfoss.Dashboard')
     .controller('DashboardCtrl',
     function (StoriesModel, STORY_STATUSES, STORY_TYPES) {
         var dashboard = this;

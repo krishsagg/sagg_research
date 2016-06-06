@@ -1,11 +1,9 @@
-angular.module('Angello.User')
+angular.module('Grunfoss.User')
     .controller('UserCtrl',
         function ($routeParams, user, stories) {
             var myUser = this;
-
             myUser.userId = $routeParams['userId'];
             myUser.user = user.data;
-
 
             myUser.getAssignedStories = function (userId, stories) {
                 var assignedStories = {};

@@ -2,7 +2,7 @@
 
 describe('Stories Model', function () {
 
-    beforeEach(module('Angello.Common'));
+    beforeEach(module('Grunfoss.Common'));
 
     afterEach(inject(function($httpBackend) {
         $httpBackend.verifyNoOutstandingExpectation();

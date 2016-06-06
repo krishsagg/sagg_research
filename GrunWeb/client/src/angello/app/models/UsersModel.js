@@ -1,4 +1,4 @@
-angular.module('Angello.Common')
+angular.module('Grunfoss.Common')
     .service('UsersModel',
     function ($http, EndpointConfigService, UtilsService) {
         var service = this,
