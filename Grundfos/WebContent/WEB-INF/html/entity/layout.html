@@ -1,25 +1,25 @@
 
 <div class="input-append">
-    <input style="width:358px; margin-left: 100px;" class="span2" type="text" ng-model="carName" required="required" min="1" />
-    <button class="btn btn-primary" ng-disabled="!carName" ng-click="addNewCar(carName)">Add Car</button>
+    <input style="width:358px; margin-left: 100px;" class="span2" type="text" ng-model="entityName" required="required" min="1" />
+    <button class="btn btn-primary" ng-disabled="!entityName" ng-click="addNewEntity(entityName)">Add Entity</button>
 </div>
 
 <h3 style="margin-left:100px;">Car List</h3>
-<div class="alert alert-info" style="width:400px;margin-left:100px;" ng-show="cars.length == 0">
-    No cars found
+<div class="alert alert-info" style="width:400px;margin-left:100px;" ng-show="entities.length == 0">
+    No Entities found
 </div>
-<table class="table table-bordered table-striped" style="width:450px; margin-left: 100px;" ng-show="cars.length > 0">
+<table class="table table-bordered table-striped" style="width:450px; margin-left: 100px;" ng-show="entities.length > 0">
     <thead>
         <tr>
             <th style="text-align: center; width: 25px;">Action</th>
-            <th style="text-align: center;">Car Name</th>
+            <th style="text-align: center;">Entity Name</th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="car in cars">
-            <td  style="width:70px;text-align:center;"><button class="btn btn-mini btn-danger" ng-click="removeCar(car)">Remove</button></td>
-            <td>{{car}}</td>
+        <tr ng-repeat="entity in entities">
+            <td  style="width:70px;text-align:center;"><button class="btn btn-mini btn-danger" ng-click="removeEntity(entity)">Remove</button></td>
+            <td>{{entity}}</td>
         </tr>
     </tbody>
 </table>
-<button style="margin-left:100px;" class="btn btn-danger"  ng-show="cars.length > 1" ng-click="removeAllCars()">Remove All Cars</button>
+<button style="margin-left:100px;" class="btn btn-danger"  ng-show="entities.length > 1" ng-click="removeAllEntities()">Remove All Entities</button>
