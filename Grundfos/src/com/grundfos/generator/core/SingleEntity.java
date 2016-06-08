@@ -4,6 +4,7 @@
 package com.grundfos.generator.core;
 
 import javax.persistence.EntityManager;
+import javax.persistence.metamodel.EntityType;
 
 import org.hibernate.jpa.internal.metamodel.AbstractIdentifiableType;
 import org.hibernate.jpa.internal.metamodel.EntityTypeImpl;
@@ -14,17 +15,16 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author krishna.gurumurthy
  *
  */
-public abstract class SingleEntity<Integer,T> extends EntityTypeImpl<T>{
+public abstract class SingleEntity<Integer,T> {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public SingleEntity(Class javaType, AbstractIdentifiableType<? super T> superType,
-			PersistentClass persistentClass) {
-		super(javaType, superType, persistentClass);
-	}
+//	public SingleEntity() {
+//		super(getJavaType(), null, null);
+//	}
 
 	@Autowired
 	private GrunEntityManagerFactory emFactory;

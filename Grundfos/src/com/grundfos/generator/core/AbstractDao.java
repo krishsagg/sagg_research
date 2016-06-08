@@ -2,7 +2,7 @@ package com.grundfos.generator.core;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class AbstractDao<T> implements IAbstractDao{
+public abstract class AbstractDao<T,Integer> implements IAbstractDao<T,Integer>{
 	
 	@Autowired
 	private GrunEntityManager emManager;
@@ -23,8 +23,11 @@ public class AbstractDao<T> implements IAbstractDao{
 	}
 
 	@Override
-	public Object find(Object t) {
-		return null;
+	public T find(T t, Integer k) {
+		T result = emManager.find((Class<T>) t, k);
+		return result;
 	}
+
+		
 
 }

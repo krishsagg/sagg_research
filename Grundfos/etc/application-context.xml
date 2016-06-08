@@ -43,12 +43,19 @@
         </security:authentication-provider>
     </security:authentication-manager>  -->
     
+     <mvc:annotation-driven />
+    
     <tx:annotation-driven transaction-manager="transactionManager" />
     
     <context:component-scan base-package="com.grundfos.generator.entity" />
     <context:component-scan base-package="com.grundfos.generator.dto" /> 
     <context:component-scan base-package="com.grundfos.generator.dao" />
-    <context:component-scan base-package="com.grundfos.generator.dao.impl" /> 
+    <context:component-scan base-package="com.grundfos.generator.dao.impl" />
+    <context:component-scan base-package="com.grundfos.generator.service" /> 
+    <context:component-scan base-package="com.grundfos.generator.service.impl" /> 
+    <context:component-scan base-package="com.grundfos.generator.core" /> 
+    <context:component-scan base-package="com.grundfos.generator.controller" />       
+    <context:component-scan base-package="com.grundfos.generator.application" />      
           
     <bean id="jpaDialect" class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
     
