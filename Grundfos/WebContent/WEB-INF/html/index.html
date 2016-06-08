@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app = 'Grunfoss'>
+<head>
+    <meta charset="utf-8"/>
+    <title>Generator</title>
+    <link rel="stylesheet" href="WebContent/resources/css/app.css"/>
+    <link rel="stylesheet" href="WebContent/resources/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<div id="wrapper">
+    <ul class="menu">
+        <li><a href="#/cars">Cars</a></li>
+        <li><a href="#/trains">Trains</a></li>
+        <li><a href="#/railwaystations">Railway Station</a></li>
+    </ul>
+    <hr class="" />
+    <div ng-view=""></div>
+</div>
+
+<script src="WebContent/resources/js/lib/angular/angular.js"></script>
+<script src="WebContent/resources/js/app.js"></script>
+<script src="WebContent/resources/js/services.js"></script>
+<script src="WebContent/resources/js/controllers/RailwayStationController.js"></script>
+<script src="WebContent/resources/js/controllers/CarController.js"></script>
+<script src="WebContent/resources/js/controllers/TrainController.js"></script>
+<script src="WebContent/resources/js/filters.js"></script>
+<script src="WebContent/resources/js/directives.js"></script>
+</body>
+</html>
