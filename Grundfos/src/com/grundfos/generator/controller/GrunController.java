@@ -22,7 +22,7 @@ public class GrunController {
 	@Autowired
 	private GrunEntityHelper entityHelper;
 	
-	@RequestMapping(path = "/entities/new", method = RequestMethod.POST)
+	@RequestMapping(path = "/entity/addnew", method = RequestMethod.POST)
 	@ResponseBody
 	public void createEntity( @RequestParam(name="",value="",required=true) String entityName, @RequestParam(name="",value="",required=true) String compName){
 		CompDetail comp = entityService.getComponentsByName(compName);	
@@ -30,24 +30,24 @@ public class GrunController {
 		entityService.createEntity(entity);
 	}
 	
-	@RequestMapping(path = "/entities/component", method = RequestMethod.GET,produces="application/json")
+	@RequestMapping(path = "/entity/component", method = RequestMethod.GET,produces="application/json")
 	public @ResponseBody List<EntityDetail> getEntitiesByComponent(String compName){
 		CompDetail comp = entityService.getComponentsByName(compName);
 		return  entityService.getEntityByComponent(comp);		
 	}
 	
-	@RequestMapping(path = "/entities/name", method = RequestMethod.GET,produces="application/json")
+	@RequestMapping(path = "/entity/name", method = RequestMethod.GET,produces="application/json")
 	public @ResponseBody EntityDetail getEntitiesByName(String name){
 		return entityService.getEntitiesByName(name);		
 	}
 	
-	@RequestMapping(path = "/componenet/new", method = RequestMethod.POST)
+	@RequestMapping(path = "/comp/addcomp", method = RequestMethod.POST)
 	public void createComponent(@RequestParam(name="",value="",required=true) String compName){
 		CompDetail comp = entityHelper.createComponent(compName);
 		entityService.createComponent(comp);
 	}
 	
-	@RequestMapping(path = "/component/name", method = RequestMethod.GET,produces="application/json")
+	@RequestMapping(path = "/comp/name", method = RequestMethod.GET,produces="application/json")
 	public @ResponseBody CompDetail getComponentsByName(String name){
 		return entityService.getComponentsByName(name);
 	}

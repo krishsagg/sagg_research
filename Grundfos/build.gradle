@@ -1,6 +1,7 @@
 apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'war'
 
 buildscript {
     repositories {
@@ -11,9 +12,24 @@ buildscript {
     }
 }
 
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "com.bmuschko:gradle-tomcat-plugin:2.2.5"
+  }
+}
+
+apply plugin: "com.bmuschko.tomcat"
+
 repositories {
    mavenCentral()
 }
+
+
 
 jar {
     from ("${projectDir}") {
@@ -25,6 +41,14 @@ jar {
     }
 }
 
+war {
+	from ("${projectDir}") {
+		include('WebContent/resources/**')
+		include('WebContent/WEB-INF/**')
+	}		
+	project.webAppDirName = 'WebContent'
+}
+
 bootRepackage {
     mainClass = 'com.grunfos.generator.application.Application'
 }
@@ -33,13 +57,12 @@ compileJava {
     //enable compilation in a separate daemon process
     options.fork = false
 	source = fileTree(dir: 'src', include: '**/*.java')
-	destinationDir = file('build/classes')
+	destinationDir = file('WebContent/WEB-INF/classes')
     //enable incremental compilation
     options.incremental = true
 }
 
-dependencies {
-	
+dependencies {	
 	//spring dependencies modules	
     compile group: 'org.springframework', name: 'spring-context', version: '4.2.6.RELEASE'
     compile group: 'org.springframework', name: 'spring-core', version: '4.2.6.RELEASE'
@@ -84,6 +107,18 @@ dependencies {
 	//swagger documentation
 	compile group: 'com.knappsack', name: 'swagger4spring-web', version: '0.3.5'
 }
+
+dependencies {
+    def tomcatVersion = '7.0.57'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
+    tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
+        exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'
+    }
+}
+
+tomcatRun.contextPath = '/'
+tomcatRunWar.contextPath = '/'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'

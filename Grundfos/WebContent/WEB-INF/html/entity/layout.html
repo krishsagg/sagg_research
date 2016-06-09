@@ -1,10 +1,10 @@
 
 <div class="input-append">
-    <input style="width:358px; margin-left: 100px;" class="span2" type="text" ng-model="entityName" required="required" min="1" />
-    <button class="btn btn-primary" ng-disabled="!entityName" ng-click="addNewEntity(entityName)">Add Entity</button>
+    <input style="width:358px; margin-left: 100px;" class="span2" type="text" ng-model="entity" required="required" min="1" />
+    <button class="btn btn-primary" ng-disabled="!entity" ng-click="addNewEntity(entity)">Add Entity</button>
 </div>
 
-<h3 style="margin-left:100px;">Car List</h3>
+<h3 style="margin-left:100px;">Entity List</h3>
 <div class="alert alert-info" style="width:400px;margin-left:100px;" ng-show="entities.length == 0">
     No Entities found
 </div>
@@ -22,4 +22,4 @@
         </tr>
     </tbody>
 </table>
-<button style="margin-left:100px;" class="btn btn-danger"  ng-show="entities.length > 1" ng-click="removeAllEntities()">Remove All Entities</button>
+<button style="margin-left:100px;" class="btn btn-danger"  ng-show="entities.length > 1" ng-click="removeAllEntity()">Remove All Entities</button>
